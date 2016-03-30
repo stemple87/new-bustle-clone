@@ -4,7 +4,7 @@ Here are our top stories:
 
 <ul>
   {{#each model as |story|}}
-    <li>{{story.headline}} {{story.image}} {{story.author}}</li>
+    {{story-tile story=story}}
   {{/each}}
 </ul>
 
