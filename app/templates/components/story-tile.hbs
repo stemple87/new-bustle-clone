@@ -1,8 +1,9 @@
-<li>{{story.headline}} {{story.author}} {{story.body}}
+<li><h3>{{story.headline}}</h3> author: {{story.author}}
   {{#if isImageShowing}}
     <p><img src={{story.image}} alt={{story.headline}}></p>
   {{else}}
     <button {{action 'imageShow'}}>Show image</button>
   {{/if}}
   <button {{action 'delete' story}}>Delete</button>
+  <br>
 </li>
