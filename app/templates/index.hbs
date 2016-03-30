@@ -1,0 +1,12 @@
+<h1> Welcome to Bustle Clone </h1>
+
+Here are our top stories:
+
+<ul>
+  {{#each model as |story|}}
+    <li>{{story.headline}} {{story.image}} {{story.author}}</li>
+  {{/each}}
+</ul>
+
+{{#link-to 'about'}}About{{/link-to}}
+{{#link-to 'contact'}}Click here to contact us.{{/link-to}}
