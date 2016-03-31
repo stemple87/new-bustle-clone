@@ -1,10 +1,11 @@
-<li><h3>{{story.headline}}</h3> author: {{story.author}}
-  {{#if isImageShowing}}
-    <p><img src={{story.image}} alt={{story.headline}}></p>
-  {{else}}
-    <button {{action 'imageShow'}}>Show image</button>
-  {{/if}}
-  {{update-story story=story update="update"}}
-  <button {{action 'delete' story}}>Delete</button>
-  <br>
-</li>
+<div class="col-md-4 storyBox col-height">
+  <span><h3>{{#link-to 'story' story.id}}{{story.headline}}{{/link-to}}</h3> author:          {{story.author}}
+
+    <p><img class="storyImage" src={{story.image}} alt={{story.headline}}></p>
+
+
+    {{update-story story=story update="update"}}
+    <button {{action 'delete' story}}>Delete</button>
+    <br>
+  </span>
+</div>
